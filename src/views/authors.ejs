@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>    
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        
+</head>
+<body>
+    
+    <!-- top navbar -->
+        
+    <nav class="sticky-top">
+      <nav>
+        
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars" style="color: gold;"></i>
+        </label>
+        
+      <nav class="navbar navbar-expand-md navbar-custom bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img src="images/lampp.gif" alt="logo" style="max-height:14vw;border: 5px solid maroon; margin-top: -4vh;">
+        </a>
+        <label class="logo" style="color: rgb(255, 196, 0); font-size: 3vw;">PUBLIC LIBRARY</label>
+        
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+       <!-- Navbar links -->
+       <a href="/" class="navbar-brand"></a>
+       <div class="collapse navbar-collapse" id="collapsibleNavbar">
+           <ul class="navbar-nav">
+           
+               <%for(i=0;i<nav.length;i++){%>
+               <li class="nav-item">
+                  <%if (nav[i].name=='Authors'){%>
+                      <a class="nav-link" style="background-color:peachpuff; color: maroon;" href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                  <%}
+                  else{%>
+                      <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                 <% } %>                    
+               </li>
+              <%}%>
+           </ul>
+       </div>
+   </nav>
+</nav>
+<!--navbar ends-->
+
+<span>
+    <div class="jumbotron"  style="width: 60vw; margin: 5vh 20vw; background-color:orange;">
+        <h1 class="display-4" style="font-family:  'Cinzel Decorative', cursive !important;">ANTHOLOGY</h1>
+        <p class="lead">But writers and their woes: they couldn’t be parted. Not for anything. ~Naomi Wood</p>
+        <hr class="my-4">
+        <p>"At a time when book banning is back in vogue, libraries remind us that truth isn’t about who yells the loudest, but who has the right information."
+          ~ Barack Obama
+          
+          </p>
+        <!-- <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+        </p>
+      </div>
+</span>
+
+
+<span style="width: 90vw; margin: 5vh; ">
+
+  <div class="card-deck" style="margin: 0 10vw;">
+    <%for(i=0;i<authors.length;i++){%>
+      <div class="card" style="margin: 2vw;background-color: black;">
+        <img src="/images/<%=authors[i].img%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%=authors[i].title%></h5>
+          <p class="card-text"><%=authors[i].author%>/<small style="color: rgb(170, 88, 59);"><%=authors[i].genre%></small></p>
+          <p class="card-text"><small><a href="/authors/<%=i%>">Read More</a></small></p>
+        </div>
+      </div>
+    <%}%>  
+  </div>
+</span>
+
+<span style="width: 90vw; margin: 5vh; ">
+
+  <div class="card-deck" style="margin: 0 10vw;">
+    <%for(i=0;i<authors.length;i++){%>
+      <div class="card" style="margin: 2vw;background-color: black;">
+        <img src="/images/<%=authors[i].img%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%=authors[i].title%></h5>
+          <p class="card-text"><%=authors[i].author%>/<small style="color: rgb(170, 88, 59);"><%=authors[i].genre%></small></p>
+          <p class="card-text"><small><a href="/authors/<%=i%>">Read More</a></small></p>
+        </div>
+      </div>
+    <%}%>  
+  </div>
+</span>
+    <!-- footer starts here -->
+    <footer style="margin-bottom: -15vh; background-color: white;">
+      <div class="content container-fluid"  >
+        <div class="row">
+          <div class="col-sm-5">
+            <p >All contents &copy;<strong>https://www.PublicLibrary.org</strong></a><br>All Rights Reserved</p>
+          </div> 
+          
+          <div class="col-md-3">
+            <nav class="navbar navbar-default" role="navigation">
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-google-plus fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+              </div>
+              <div class="col-sm-3">
+              <ul class="nav navbar-nav navbar-right" >
+                
+                <li><a href="#" style="text-decoration: none;">Terms of Use</a></li>
+                <!-- <li><a href="#" style="text-decoration: none;">Privacy Policy</a></li> -->
+              </ul>
+            </nav>
+          </div>
+        </div> 
+      </div> 
+      </footer>
+      <!-- /footer -->   
+     
+</body>
+</html>

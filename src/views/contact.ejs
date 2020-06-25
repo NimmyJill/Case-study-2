@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+       <title>contact</title>
+       <link rel="stylesheet" href="css/contact.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+       <meta name="generator" content="Bootply" />
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	  	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body style="background-image: url(images/contact.gif); background-size: cover;">
+
+ 
+      <!-- top navbar -->
+        
+      <nav class="sticky-top">
+        <nav>
+          
+          <label for="check" class="checkbtn">
+            <i class="fa fa-bars" style="color: gold;"></i>
+          </label>
+          
+        <nav class="navbar navbar-expand-md navbar-custom bg-dark navbar-dark">
+          <!-- Brand -->
+          <a class="navbar-brand" href="#">
+            <img src="images/lampp.gif" alt="logo" style="max-height:14vw;border: 5px solid maroon;">
+          </a>
+          <!-- <label class="logo" style="color:rgb(31, 23, 23); font-size: 3vw;">PUBLIC LIBRARY</label> -->
+          
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <!-- Navbar links -->
+          <a href="/" class="navbar-brand"></a>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+              
+                  <%for(i=0;i<nav.length;i++){%>
+                  <li class="nav-item">
+                     <%if (nav[i].name=='Contact'){%>
+                         <a class="nav-link" style="background-color:peachpuff; color: maroon;" href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                     <%}
+                     else{%>
+                         <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                    <% } %>                    
+                  </li>
+                 <%}%>
+              </ul>
+          </div>
+      </nav>
+  </nav>
+  <!--navbar ends-->
+    
+
+   
+
+    <!-- <marquee behavior="alternate" direction="right" scrollamount="4"> Login to Explore Kerala</marquee> -->
+   
+    <div class="container contact-form" style=" margin-top: 10vw;">
+        <div class="contact-image">
+            <img src="images/rocket.jpg">
+        </div>
+        <form method="post">
+            <h3>Drop Us a Message</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+   <!-- footer starts here -->
+   <footer style="margin-bottom: -18vh; background-color: white;">
+    <div class="content container-fluid"  >
+      <div class="row">
+        <div class="col-sm-5">
+          <p >All contents &copy;<strong>https://www.PublicLibrary.org</strong></a><br>All Rights Reserved</p>
+        </div> 
+        
+        <div class="col-md-3">
+          <nav class="navbar navbar-default" role="navigation">
+              <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse fa-spin"></i>
+              </span></a>
+              <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse fa-spin"></i>
+              </span></a>
+              <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                <i class="fa fa-instagram fa-stack-1x fa-inverse fa-spin"></i>
+              </span></a>
+              <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                <i class="fa fa-google-plus fa-stack-1x fa-inverse fa-spin"></i>
+              </span></a>
+              <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse fa-spin"></i>
+              </span></a>
+            </div>
+            <div class="col-sm-3">
+            <!-- <ul class="nav navbar-nav navbar-right" >
+              
+              <li><a href="#" style="text-decoration: none;">Terms of Use</a></li>
+              <li><a href="#" style="text-decoration: none;">Privacy Policy</a></li>
+            </ul> -->
+          </nav>
+        </div>
+      </div> 
+    </div> 
+    </footer>
+    <!-- /footer -->
+ 
+</body>
+</html>

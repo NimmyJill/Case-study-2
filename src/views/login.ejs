@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+       <title>login</title>
+       <link rel="stylesheet" href="css/logiN.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+       <meta name="generator" content="Bootply" />
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	  	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+ 
+   
+    <!-- top navbar -->
+        
+    <nav class="sticky-top">
+      <nav>
+        
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars" style="color: rgb(22, 20, 20);"></i>
+        </label>
+        
+      <nav class="navbar navbar-expand-md navbar-custom bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img src="images/lampp.gif" alt="logo" style="max-height:14vw;border: 5px solid maroon;">
+        </a>
+        <!-- <label class="logo" style="color: rgb(255, 196, 0); font-size: 3vw;">PUBLIC LIBRARY</label> -->
+        
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <a href="/" class="navbar-brand"></a>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            
+                <%for(i=0;i<navNew.length;i++){%>
+                <li class="nav-item">
+                   <%if (navNew[i].name=='Login'){%>
+                       <a class="nav-link" style="background-color:peachpuff; color: maroon;" href="<%=navNew[i].link%>"><%=navNew[i].name%></a>
+                   <%}
+                   else{%>
+                       <a class="nav-link" href="<%=navNew[i].link%>"><%=navNew[i].name%></a>
+                  <% } %>                    
+                </li>
+               <%}%>
+            </ul>
+        </div>
+    </nav>
+</nav>
+<!--navbar ends-->
+
+    <!-- <marquee behavior="alternate" direction="right" scrollamount="4"> Login to Explore Kerala</marquee> -->
+   
+    <div class="container">
+      <div class="heading">
+          <h1>Login</h1>
+      </div>
+      <form action="/books" onsubmit="return checkInputs()" class="form" id="form">
+          
+ 
+         <div class="form-control">
+             <label >Username</label> 
+             <input type="text" placeholder="Enter Username" id="username" >
+             <i class="fa fa-check-square"></i>
+             <i class="fa fa-exclamation-triangle"></i>
+             <small>Error message</small>
+         </div>
+        
+         
+         <div class="form-control">
+             <label >Password</label> 
+             <input type="password" placeholder="Enter your password" id="pswd" >
+             <i class="fa fa-check-square"></i>
+             <i class="fa fa-exclamation-triangle"></i>
+             <small>Error message</small>
+         </div>
+
+                   
+         
+         <button class="submit" type="submit">Submit</button>
+      <br>
+         <div class="form-control"> 
+            <div class="login-sign">
+              <h5>Need an Account?</h5>
+              <a class="backto" style="text-decoration: none;font-size:large;" href="signup.html">Signup</a>
+            </div>
+          </div>
+      
+      
+        </form>
+     </div>
+     <!-- footer starts here -->
+     <footer style="margin-bottom: -18vh; background-color: white;">
+      <div class="content container-fluid"  >
+        <div class="row">
+          <div class="col-sm-5">
+            <p >All contents &copy;<strong>https://www.PublicLibrary.org</strong></a><br>All Rights Reserved</p>
+          </div> 
+          
+          <div class="col-md-3">
+            <nav class="navbar navbar-default" role="navigation">
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-google-plus fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+                <a href="#" target="_blank"><span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x fa-spin"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse fa-spin"></i>
+                </span></a>
+              </div>
+              <div class="col-sm-3">
+              <!-- <ul class="nav navbar-nav navbar-right" >
+                
+                <li><a href="#" style="text-decoration: none;">Terms of Use</a></li>
+                <li><a href="#" style="text-decoration: none;">Privacy Policy</a></li>
+              </ul> -->
+            </nav>
+          </div>
+        </div> 
+      </div> 
+      </footer>
+      <!-- /footer -->   
+      
+    
+  <script src="./js/login.js"></script>
+</body>
+</html>
+  
