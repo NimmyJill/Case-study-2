@@ -2,6 +2,7 @@ const express = require("express");
 const app = new express();
 
 const nav = [
+  { link: "/", name: "Home" },
   { link: "/books", name: "Books" },
   { link: "/authors", name: "Authors" },
   { link: "/contact", name: "Contact" },

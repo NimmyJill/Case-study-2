@@ -54,7 +54,7 @@ function router(nav) {
       })
     }
     else{
-    Bookdata.updateOne({_id:id},{$set:{title:req.body.title, author:req.body.author,genre:req.body.genre}})
+    Bookdata.updateOne({_id:id},{$set:{title:req.body.title, author:req.body.author,genre:req.body.genre, image:req.body.image}})
       .then((books)=>
       {
         res.redirect('/books');
@@ -126,7 +126,7 @@ if(req.body.image=="")
     })
   }
   else{
-  authorData.updateOne({_id:id},{$set:{title:req.body.title, author:req.body.author,genre:req.body.genre}})
+  authorData.updateOne({_id:id},{$set:{title:req.body.title, author:req.body.author,genre:req.body.genre,image:req.body.image}})
     .then((authors)=>
     {
       res.redirect('/authors');

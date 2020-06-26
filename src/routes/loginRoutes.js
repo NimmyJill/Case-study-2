@@ -1,20 +1,25 @@
 const express = require("express");
-const loginRouter = express.Router();
 const signupData = require('../model/signupData');
+const app= new express();
+const loginRouter = express.Router();
+var loginStatus;
 
 function router(navNew) {
-  // loginRouter.post("/new",(req,res)=>{
+ loginRouter.get('/',function(req,res){
+   if(loginStatus=="Invalid Credentials!!"){
+     res.render('login',{
+       navNew,
+       status:loginStatus
+     });
+   }
+   else{
+     res.render('login',{
+       navNew,
+       status:"Enter Username and Password"
 
-  //   console.log(req.body.Uname);
-  //   res.write("Data is adding");
-  //   res.end();
-  // });
-  // loginRouter.get("/new",(req,res)=>{
-
-  //   console.log(req.body.Uname);
-  //   res.write("Data is adding");
-  //   res.end();
-  // });
+     })
+   }
+ })
 
 
   loginRouter.post("/check", function(req,res){
@@ -22,8 +27,16 @@ function router(navNew) {
   let password= req.body.pswd;
   signupData.findOne({username:Uname,pswd:password})
   .then(function(data){
-    if(data===null){res.redirect('/login')}
-    else{res.redirect('/books')}
+    if(data===null)
+    {
+      loginStatus= "Invalid Credentials!!";
+      res.redirect('/login');
+    }
+    else
+    {
+    loginStatus="Login Successful..!"
+      res.redirect('/books');
+    }
   })
 
 
