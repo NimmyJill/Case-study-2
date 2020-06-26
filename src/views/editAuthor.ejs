@@ -45,7 +45,7 @@
           
               <%for(i=0;i<nav.length;i++){%>
               <li class="nav-item">
-                 <%if (nav[i].name=='Books'){%>
+                 <%if (nav[i].name=='Authors'){%>
                      <a class="nav-link" style="background-color:peachpuff; color: maroon;" href="<%=nav[i].link%>"><%=nav[i].name%></a>
                  <%}
                  else{%>
@@ -58,33 +58,17 @@
   </nav>
 </nav>
 <!--navbar ends-->
- <span>
-    <div class="jumbotron"  style="width: 60vw; margin: 5vh 20vw; background-color: rgb(255, 196, 0)">
-        <h1 class="display-4" style="font-family:  'Cinzel Decorative', cursive !important;">A Book</h1>
-        <p class="lead">“There is more treasure in books than in all the pirate’s loot on Treasure Island.”</p><br><p style="float: right;margin-top: -3vh;">– Walt Disney</p>
-        <hr class="my-4">
-        <p>The promotion of literary or scientific learning through this Bibliotheca...</p>
-        <!-- <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
-        </p>
-      </div>
-</span>
 
-<div style="text-align: center; font-size: 2vw;   ">
-  <a style="padding: 0 5vw; background-color: maroon; color: yellow; text-decoration: none;" href="/admin/editBook/<%=book._id%>">Edit</a>
-  <a  style="padding: 0 5vw; background-color: maroon; color: yellow; text-decoration: none;" href="/admin/deleteBook/<%=book._id%>">Delete</a>
-</div>
+<div class="row" style="margin-top:20vh; margin-left:10vw;">
+    <form method="POST" action="/admin/updateAuthor/<%=author._id%>" >
+        Title: <br><input type="text" name="title" value="<%=author.title%>" style="font-size: larger;"><br><br>
+        Author: <br><input type="text" name="author" value="<%=author.author%>" style="font-size: larger;"><br><br>
+        Genre: <br><input type="text" name="genre" value="<%=author.genre%>" style="font-size: larger;"><br><br>
+        Image: <br><input type="file" name="image" value="font-size: larger;"><br><br>
 
-
-<div class="card-deck" style="margin: 0 10vw;">    
-      <div class="card" style="margin: 2vw;background-color: black;">
-        <img src="/images/<%=book.image%>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%=book.title%></h5>
-          <p class="card-text"><%=book.author%>/<small style="color: rgb(170, 88, 59);"><%=book.genre%></small></p>
-          <!-- <p class="card-text"><small><a href="/books/<%=i%>">Read More</a></small></p> -->
-        </div>
-      </div> 
+        <button type="submit">Add</button>
+    </form>
+    
 </div>
 
  <!-- footer starts here -->

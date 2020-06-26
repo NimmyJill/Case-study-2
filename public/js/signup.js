@@ -120,7 +120,7 @@ function isMob(mob){
     return /^\+?([6-9]{1})([\d]{2})[\-.\s]?([\d]{3})[\-.\s]?([\d]{4})$/.test(mob)
 }
 function isPswd(pswd){
-    return /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{8,})$/.test(pswd)
+    return /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=.*[!@#$%&*])(?=\S*?[0-9]).{8,})$/.test(pswd)
 }
 
 

@@ -59,11 +59,34 @@
    </nav>
 </nav>
 <!--navbar ends-->
+
+
+<span>
+  <div class="jumbotron"  style="width: 60vw; margin: 5vh 20vw; background-color:orange;">
+      <h1 class="display-4" style="font-family:  'Cinzel Decorative', cursive !important;">ANTHOLOGY</h1>
+      <p class="lead">But writers and their woes: they couldn’t be parted. Not for anything. ~Naomi Wood</p>
+      <hr class="my-4">
+      <p>"At a time when book banning is back in vogue, libraries remind us that truth isn’t about who yells the loudest, but who has the right information."
+        ~ Barack Obama
+        
+        </p>
+      <!-- <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+      </p>
+    </div>
+</span>
+
+<!-- Edit/Delete button -->
+<div style="text-align: center; font-size: 2vw;   ">
+  <a style="padding: 0 5vw; background-color: maroon; color: yellow; text-decoration: none;" href="/admin/editAuthor/<%=author._id%>">Edit</a>
+  <a  style="padding: 0 5vw; background-color: maroon; color: yellow; text-decoration: none;" href="/admin/deleteAuthor/<%=author._id%>">Delete</a>
+</div>
+
  <span>
     <div class="card-deck" style="margin: 0 10vw;">
     
           <div class="card" style="margin: 2vw;background-color: black;">
-            <img src="/images/<%=author.img%>" class="card-img-top" alt="...">
+            <img src="/images/<%=author.image%>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><%=author.title%></h5>
               <p class="card-text"><%=author.author%>/<small style="color: rgb(170, 88, 59);"><%=author.genre%></small></p>

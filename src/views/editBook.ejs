@@ -61,10 +61,10 @@
 
 <div class="row" style="margin-top:20vh; margin-left:10vw;">
     <form method="POST" action="/admin/update/<%=book._id%>" >
-        Title: <br><input type="text" name="title" placeholder="<%=book.title%>" style="font-size: larger;"><br><br>
-        Author: <br><input type="text" name="author" placeholder="<%=book.author%>" style="font-size: larger;"><br><br>
-        Genre: <br><input type="text" name="genre" placeholder="<%=book.genre%>" style="font-size: larger;"><br><br>
-        Image: <br><input type="file" name="image" style="font-size: larger;"><br><br>
+        Title: <br><input type="text" name="title" value="<%=book.title%>" style="font-size: larger;"><br><br>
+        Author: <br><input type="text" name="author" value="<%=book.author%>" style="font-size: larger;"><br><br>
+        Genre: <br><input type="text" name="genre" value="<%=book.genre%>" style="font-size: larger;"><br><br>
+        Image: <br><input type="file" name="image" value="font-size: larger;"><br><br>
 
         <button type="submit">Add</button>
     </form>

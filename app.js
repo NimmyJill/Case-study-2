@@ -5,7 +5,8 @@ const nav = [
   { link: "/books", name: "Books" },
   { link: "/authors", name: "Authors" },
   { link: "/contact", name: "Contact" },
-  { link: "/admin", name: "Add Book" }
+  { link: "/admin", name: "Add Book" },
+  { link: "/admin/a  ", name: "Add Author" }
 
 ];
 
@@ -41,4 +42,4 @@ app.get("/", function (req, res) {
   });
 });
 
-app.listen(3000);
+app.listen(3003);

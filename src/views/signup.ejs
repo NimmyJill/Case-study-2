@@ -62,10 +62,10 @@
       <div class="heading">
           <h1>Create Your Account</h1>
       </div>
-      <form action="/login" onsubmit="return checkInputs()" class="form" id="form">
+      <form action="/signup/userDetailsSubmit" onsubmit="return checkInputs()" method="POST" class="form" id="form">
           <div class="form-control" >
               <label >Name</label> 
-              <input type="text" placeholder="Enter your Name" id="name" name="Uname" >
+              <input type="text" placeholder="Enter your Name" id="name" name="name" >
               <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
               <small>Error message</small>
@@ -74,7 +74,7 @@
  
           <div class="form-control" >
              <label >Email</label> 
-             <input type="email" placeholder="Enter your Email" id="email" >
+             <input type="email" placeholder="Enter your Email" id="email" name="email">
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>
@@ -83,7 +83,7 @@
  
          <div class="form-control">
              <label >Mobile Number</label> 
-             <input type="number" placeholder="Enter your Mobile number" id="mob" >
+             <input type="number" placeholder="Enter your Mobile number" id="mob" name="mobile" >
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>
@@ -92,7 +92,7 @@
  
          <div class="form-control">
              <label >Username</label> 
-             <input type="text" placeholder="Want to be called as.." id="username" >
+             <input type="text" placeholder="Want to be called as.." id="username" name="username">
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>
@@ -101,7 +101,7 @@
          
          <div class="form-control">
              <label >Password</label> 
-             <input type="password" placeholder="Enter your password" id="pswd" >
+             <input type="password" placeholder="Enter your password" id="pswd" name="pswd" >
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>
@@ -115,7 +115,7 @@
          
          <div class="form-control">
              <label >Check your password</label> 
-             <input type="password" placeholder="Password once again.." id="cpswd">
+             <input type="password" placeholder="Password once again.." id="cpswd" name="cpswd">
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>

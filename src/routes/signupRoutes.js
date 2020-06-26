@@ -22,6 +22,7 @@ function router(navNew) {
         cpswd: req.body.cpswd
         
       };
+  console.log(item);
   
       var detail = signupData(item);
       detail.save(); //saving to database

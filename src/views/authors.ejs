@@ -81,32 +81,18 @@
   <div class="card-deck" style="margin: 0 10vw;">
     <%for(i=0;i<authors.length;i++){%>
       <div class="card" style="margin: 2vw;background-color: black;">
-        <img src="/images/<%=authors[i].img%>" class="card-img-top" alt="...">
+        <img src="/images/<%=authors[i].image%>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><%=authors[i].title%></h5>
           <p class="card-text"><%=authors[i].author%>/<small style="color: rgb(170, 88, 59);"><%=authors[i].genre%></small></p>
-          <p class="card-text"><small><a href="/authors/<%=i%>">Read More</a></small></p>
+          <p class="card-text"><small><a href="/authors/<%=authors[i]._id%>">Read More</a></small></p>
         </div>
       </div>
     <%}%>  
   </div>
 </span>
 
-<span style="width: 90vw; margin: 5vh; ">
 
-  <div class="card-deck" style="margin: 0 10vw;">
-    <%for(i=0;i<authors.length;i++){%>
-      <div class="card" style="margin: 2vw;background-color: black;">
-        <img src="/images/<%=authors[i].img%>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%=authors[i].title%></h5>
-          <p class="card-text"><%=authors[i].author%>/<small style="color: rgb(170, 88, 59);"><%=authors[i].genre%></small></p>
-          <p class="card-text"><small><a href="/authors/<%=i%>">Read More</a></small></p>
-        </div>
-      </div>
-    <%}%>  
-  </div>
-</span>
     <!-- footer starts here -->
     <footer style="margin-bottom: -15vh; background-color: white;">
       <div class="content container-fluid"  >

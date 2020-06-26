@@ -60,12 +60,12 @@
       <div class="heading">
           <h1>Login</h1>
       </div>
-      <form action="/books" onsubmit="return checkInputs()" class="form" id="form">
+      <form action="/login/check" onsubmit="return checkInputs()" class="form" id="form" method="POST" >
           
  
          <div class="form-control">
              <label >Username</label> 
-             <input type="text" placeholder="Enter Username" id="username" >
+             <input type="text" placeholder="Enter Username" id="username" name="name">
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>
@@ -74,7 +74,7 @@
          
          <div class="form-control">
              <label >Password</label> 
-             <input type="password" placeholder="Enter your password" id="pswd" >
+             <input type="password" placeholder="Enter your password" id="pswd" name="pswd" >
              <i class="fa fa-check-square"></i>
              <i class="fa fa-exclamation-triangle"></i>
              <small>Error message</small>
